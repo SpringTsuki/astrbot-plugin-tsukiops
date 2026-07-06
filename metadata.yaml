@@ -1,0 +1,22 @@
+name: astrbot_plugin_tsukiops
+display_name: 服务器基本运维监控
+desc: 为 Astrobot 提供了可以远程 SSH 链接 Linux 服务器，自动批量执行巡检指令。并返回巡检报告的插件功能。
+version: beta V0.1.0
+author: 浅月
+repo:
+category: 巡检
+tags:
+  - SSH
+  - 服务器巡检
+help:
+  私聊发送：
+  - /server add <名称> <IP> <用户> <密钥名>
+  - 添加服务器：名称、IP、用户为 Linux 的 user、SSH 密钥（需在Web页面上传）
+  - /server list
+  - 查看已添加的服务器列表
+  - /server remove <名称>
+  - 移除指定名称的服务器
+  - /idc daily
+  - 批量对保存的服务器执行巡检
+  - /check <名称> <模块>
+  - 对指定服务器执行指定模块的巡检

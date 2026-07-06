@@ -1,0 +1,60 @@
+:root {
+  --bg: #fff;
+  --text: #1a1a1a;
+  --border: #e0e0e0;
+  --accent: #4a90d9;
+  --danger: #e74c3c;
+}
+[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #e0e0e0;
+  --border: #333;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 8px; text-align: left; border-bottom: 1px solid var(--border); }
+
+input, select, button {
+  padding: 6px 10px;
+  margin: 4px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+.delBtn { background: var(--danger); }
+
+.keyTag { display: inline-flex; align-items: center; gap: 4px; }
+.delKeyBtn {
+ background: var(--danger);
+ color: white;
+ border: none;
+ border-radius: 50%;
+ width: 18px; height: 18px;
+ font-size: 12px;
+ line-height: 1;
+ cursor: pointer;
+ padding: 0;
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>服务器管理</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 密钥上传区 -->
+  <section class="card">
+    <h2>SSH 密钥管理</h2>
+    <input type="file" id="keyFile" />
+    <button id="uploadKeyBtn">上传密钥</button>
+    <span id="uploadStatus"></span>
+    <p>已保存: <span id="keyTags"></span></p>
+  </section>
+
+  <!-- 服务器列表 -->
+  <section class="card">
+    <h2>服务器列表</h2>
+    <table id="serverTable">
+      <thead>
+        <tr><th>名称</th><th>IP</th><th>用户</th><th>密钥</th><th>操作</th></tr>
+      </thead>
+      <tbody id="serverTbody"></tbody>
+    </table>
+    <p id="noServers" style="display:none;color:#888">暂无服务器，请在下方添加。</p>
+  </section>
+
+  <!-- 添加服务器 -->
+  <section class="card">
+    <h2>添加服务器</h2>
+    <input id="addName" placeholder="名称（如 web01）" />
+    <input id="addIP" placeholder="IP 地址" />
+    <input id="addUser" placeholder="SSH 用户" value="astrbot" />
+    <select id="addKey"></select>
+    <button id="addBtn">确认添加</button>
+    <span id="addStatus"></span>
+  </section>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
